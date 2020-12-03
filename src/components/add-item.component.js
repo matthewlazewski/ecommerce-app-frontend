@@ -142,6 +142,10 @@ export default class AddItem extends Component {
                                 name="category"
                             />
                         </div>
+
+                        <button onClick={this.saveItem} className="btn btn-success">
+                            Submit
+                        </button>
                     </div>
                 )}
             </div>
