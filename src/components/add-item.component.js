@@ -83,4 +83,68 @@ export default class AddItem extends Component {
             submitted: false
         })
     }
+
+    render(){
+        return(
+            <div className="submit-form">
+                {this.state.submitted ? (
+                    <div>
+                        <h4>Item submitted successfully</h4>
+                        <button className="btn btn-success" onClick={this.newTutorial}>
+                            Add 
+                        </button>
+                    </div>
+                ): (
+                    <div>
+                        <div className="form-group">
+                            <label htmlFor="name">Name</label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                id="name"
+                                required
+                                value={this.state.name}
+                                onChange={this.onChangeName}
+                                name="name"
+                            />
+                        </div>
+                        <div className="form-group">
+                            <label htmlFor="description">Description</label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                id="description"
+                                required
+                                value={this.state.description}
+                                onChange={this.onChangeDescription}
+                                name="description"
+                            />
+                        </div><div className="form-group">
+                            <label htmlFor="price">Price</label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                id="price"
+                                required
+                                value={this.state.price}
+                                onChange={this.onChangePrice}
+                                name="price"
+                            />
+                        </div><div className="form-group">
+                            <label htmlFor="category">Category</label>
+                            <input 
+                                type="text"
+                                className="form-control"
+                                id="category"
+                                required
+                                value={this.state.category}
+                                onChange={this.onChangeCategory}
+                                name="category"
+                            />
+                        </div>
+                    </div>
+                )}
+            </div>
+        )
+    }
 };
