@@ -4,7 +4,7 @@ import ItemDataService from '../services/item.service';
 export default class AddItem extends Component {
     constructor(props) {
         super(props);
-        this.onChangeName = this.onChangDescriptions.bind(this);
+        this.onChangeName = this.onChangeName.bind(this);
         this.onChangeDescription  = this.onChangeDescription.bind(this);
         this.onChangePrice = this.onChangePrice.bind(this);
         this.onChangeCategory = this.onChangeCategory.bind(this);

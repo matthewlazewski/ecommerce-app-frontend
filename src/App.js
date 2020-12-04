@@ -16,28 +16,30 @@ class App extends Component {
             Items
           </a>
           <div className="navbar-nav mr-auto">
-            <li className="nav-item">
-              <Link to={"/items"} className="nav-link">
-                Items
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={"/add"} className="nav-link">
-                New Item
-              </Link>
-            </li>
+            <ul>
+              <li className="nav-item">
+                <Link to={"/items"} className="nav-link">
+                  Items
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to={"/add"} className="nav-link">
+                  New Item
+                </Link>
+              </li>
+            </ul>
           </div>
         </nav>
 
         <div className="container mt-3">
           <Switch>
             <Route exact path={["/", "/items"]} component={ItemsList} />
-            <Route exact paht="/add" component={AddItem} />
+            <Route exact path="/add" component={AddItem} />
             <Route path="/items/:id" component={Item} />
           </Switch>
         </div>
       </div>
-    )
+    );
   }
 };
 
