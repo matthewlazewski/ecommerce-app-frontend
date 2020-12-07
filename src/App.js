@@ -2,15 +2,18 @@ import React, { Component } from "react";
 import { Switch, Route, Link } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import "./details.js"
 
 import AddItem from './components/add-item.component';
 import Item from './components/item.component';
 import ItemsList from './components/item-list.component';
+import Details from "./details.js";
 
 class App extends Component {
   render() {  
     return (
       <div>
+        <Details />
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <a href="/items" className="navbar-brand">
             Items
